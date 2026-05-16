@@ -1,0 +1,20 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name_en": "Royal Bandhani Poshak",
+      "name_hi": "\u0930\u0949\u092f\u0932 \u092c\u0902\u0927\u0928\u0940 \u092a\u094b\u0936\u093e\u0915",
+      "price": 2799,
+      "image": "../assets/images/mobile-design.png",
+      "category": "Poshak"
+    },
+    {
+      "id": 2,
+      "name_en": "Jaipuri Lehenga Choli",
+      "name_hi": "\u091c\u092f\u092a\u0941\u0930\u0940 \u0932\u0939\u0902\u0917\u093e \u091a\u094b\u0932\u0940",
+      "price": 3499,
+      "image": "../assets/images/web-design.png",
+      "category": "Lehenga"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+@media(max-width:900px){
+
+  header{
+    padding:15px;
+  }
+
+  nav{
+    flex-wrap:wrap;
+  }
+
+}

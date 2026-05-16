@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Poshak by Shivkripa - Authentic Rajasthani Poshak, Lehenga Choli, Bandhani Dresses, Traditional Women Wear, Rajputi Dresses and Cultural Fashion Collection from Rajasthan.">
+<meta name="keywords" content="Rajasthani Poshak, Rajputi Dress, Bandhani Dress, Lehenga Choli, Traditional Rajasthani Dress, Rajasthani Women Wear, Ethnic Wear Rajasthan, Authentic Rajasthani Culture Dress, Poshak by Shivkripa, Shivkripa Poshak, Rajasthani Boutique, Jaipuri Dress">
+<meta name="author" content="Poshak by Shivkripa">
+<meta property="og:title" content="Poshak by Shivkripa | Authentic Rajasthani Fashion">
+<meta property="og:description" content="Discover authentic Rajasthani poshak, lehenga choli and traditional women wear inspired by Rajasthan culture.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../assets/images/web-design.png">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://poshakbyshivkripa.github.io/">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "ClothingStore",
+ "name": "Poshak by Shivkripa",
+ "url": "https://poshakbyshivkripa.github.io/",
+ "description": "Authentic Rajasthani traditional women clothing boutique.",
+ "address": {
+   "@type": "PostalAddress",
+   "streetAddress": "DRDA",
+   "addressLocality": "Jaisalmer",
+   "addressRegion": "Rajasthan",
+   "postalCode": "345001",
+   "addressCountry": "IN"
+ },
+ "brand": {
+   "@type": "Brand",
+   "name": "Poshak by Shivkripa"
+ }
+}
+</script>
+
+<title>Poshak by Shivkripa</title>
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<div id="header"></div>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Elegance</h1>
+    <p>Discover authentic Rajasthani poshak, rajputi dresses, lehenga choli and traditional women wear inspired by Rajasthan culture.</p>
+    <a class="btn" href="pages/products.html">Shop Now</a>
+  </div>
+  <img src="assets/images/web-design.png">
+</section>
+
+<section class="products">
+  <h2>Best Sellers</h2>
+  <div class="grid" id="homeProducts"></div>
+</section>
+
+<div id="footer"></div>
+
+<script src="scripts/components/header.js"></script>
+<script src="scripts/components/footer.js"></script>
+<script src="scripts/main.js"></script>
+<script>
+loadHeader();
+loadFooter();
+
+fetch('data/products.json')
+.then(res=>res.json())
+.then(data=>{
+  const container = document.getElementById('homeProducts');
+  data.products.forEach(product=>{
+    container.innerHTML += `
+    <div class="card">
+      <img src="${product.image.replace('../','')}">
+      <div class="card-body">
+        <h3>${product.name_en}</h3>
+        <p>₹${product.price}</p>
+      </div>
+    </div>`;
+  });
+});
+</script>
+</body>
+</html>

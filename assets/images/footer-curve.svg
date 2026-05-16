@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 1440 180"
+preserveAspectRatio="none">
+
+  <!-- Top Luxury Curve -->
+
+  <path
+    d="M0,140
+       C260,10 520,220 860,120
+       C1120,50 1300,160 1440,0
+       L1440,180
+       L0,180 Z"
+
+    fill="url(#themeGradient)">
+  </path>
+
+  <!-- Bottom Deep Curve -->
+
+  <path
+    d="M0,170
+       C320,40 620,210 980,140
+       C1220,90 1360,150 1440,40
+       L1440,180
+       L0,180 Z"
+
+    fill="#f8edf6">
+  </path>
+
+  <!-- Gradient -->
+
+  <defs>
+
+    <linearGradient
+      id="themeGradient"
+      x1="0%"
+      y1="0%"
+      x2="100%"
+      y2="0%">
+
+      <stop offset="0%" stop-color="#f8c9df"/>
+      <stop offset="35%" stop-color="#d96ba7"/>
+      <stop offset="70%" stop-color="#9b63c7"/>
+      <stop offset="100%" stop-color="#f0b5c2"/>
+
+    </linearGradient>
+
+  </defs>
+
+</svg>

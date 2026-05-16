@@ -1,0 +1,159 @@
+/* ===== Footer ===== */
+
+.footer{
+  margin-top:0;
+  padding:0;
+  overflow:hidden;
+}
+
+/* ===== Curve ===== */
+
+.footer-curve{
+  width:100%;
+  line-height:0;
+  margin:0;
+  padding:0;
+}
+
+.footer-curve img{
+  width:100%;
+  display:block;
+  margin:0;
+  padding:0;
+}
+
+/* ===== Content ===== */
+
+.footer-container{
+  padding:42px 42px 30px;
+  background:#f8edf6;
+  color:#5f4b57;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(170px,1fr));
+  gap:32px;
+}
+
+/* ===== Logo ===== */
+
+.footer-logo{
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+}
+
+.footer-logo small{
+  display:block;
+  color:#cf72a8;
+  font-size:.68rem;
+  letter-spacing:.35em;
+  margin-bottom:0px;
+  text-transform:uppercase;
+}
+
+.footer-logo strong{
+  font-size:36px;
+  font-weight:400;
+  font-family:'Times New Roman', serif;
+  line-height:.95;
+
+  background:
+  linear-gradient(
+    90deg,
+    #7b5cc7,
+    #d95ca7,
+    #f0b5c2
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ===== Description ===== */
+
+.footer-shop-details{
+  margin:16px 0 0;
+  max-width:290px;
+  line-height:1.8;
+  font-size:.92rem;
+  color:#7b6975;
+  font-weight:400;
+  font-family:'Poppins', sans-serif;
+  font-style:italic;
+}
+
+/* ===== Titles ===== */
+
+.footer-title{
+  color:#3f3144;
+  font-size:15px;
+  font-weight:500;
+  margin-bottom:16px;
+  padding-bottom:10px;
+  border-bottom:1px solid #e8c8dd;
+  display:inline-block;
+}
+
+/* ===== Links ===== */
+
+.footer-links{
+  display:grid;
+  gap:.8rem;
+}
+
+.footer-links a{
+  color:#6d5a67;
+  font-size:.92rem;
+  font-weight:400;
+  text-decoration:none;
+  transition:.25s ease;
+}
+
+.footer-links a:hover{
+  color:#b84db8;
+  transform:translateX(2px);
+}
+
+/* ===== Footer Text ===== */
+
+.footer a,
+.footer p{
+  color:#6d5a67;
+  font-size:14px;
+  font-weight:400;
+}
+
+/* ===== Bottom ===== */
+
+.footer-bottom{
+  margin-top:0px;
+  border-top:1px solid #ead7e4;
+  padding-top:10px;
+  font-size:.84rem;
+  color:#8b7a85;
+  text-align:center;
+}
+
+/* ===== Mobile ===== */
+
+@media(max-width:860px){
+
+  .footer-container{
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .footer-container{
+    padding:32px 24px 24px;
+    grid-template-columns:1fr;
+    gap:32px;
+  }
+
+  .footer-logo strong{
+    font-size:32px;
+  }
+
+}
