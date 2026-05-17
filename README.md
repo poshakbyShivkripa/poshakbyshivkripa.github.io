@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Poshak by Shivkripa
 
@@ -13,3 +14,7 @@ Simple static responsive ecommerce website.
 
 ## Run
 Open index.html in browser.
+=======
+# poshakbyshivkripa.github.io
+Shell shivkripa shop product online
+>>>>>>> af181f14ee51c22ab729115dd647015a3ab78967

@@ -60,12 +60,41 @@ function loadHeader(){
 
 <header>
 
-  <div class="logo">
-    <small>POSHAK BY</small>
-    <strong>Shivkripa</strong>
+  <div class="mobile-bar">
+    <button class="mobile-menu-toggle" type="button" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="logo">
+      <small>POSHAK BY</small>
+      <strong>Shivkripa</strong>
+    </div>
+
+    <div class="header-icons">
+      <a href="#" class="icon-btn">
+        <img src="${iconPath}search.svg" alt="Search">
+      </a>
+
+      <a href="${base}pages/wishlist.html" class="icon-btn">
+        <img src="${iconPath}wishlist.svg" alt="Wishlist">
+      </a>
+
+      <a href="${base}pages/login.html" class="icon-btn">
+        <img src="${iconPath}user.svg" alt="User">
+      </a>
+
+      <a href="${base}pages/cart.html" class="icon-btn icon-bag">
+        <img src="${iconPath}cart.svg" alt="Cart">
+        <span class="icon-badge">1</span>
+      </a>
+    </div>
   </div>
 
-  <nav>
+  <nav class="main-nav">
+    <button class="drawer-close" type="button" aria-label="Close menu">×</button>
+
     <a href="${base}index.html">Home</a>
 
     <div class="dropdown">
@@ -92,24 +121,7 @@ function loadHeader(){
     <a href="${base}pages/contact.html">Contact Us</a>
   </nav>
 
-  <div class="header-icons">
-    <a href="#" class="icon-btn">
-    <img src="${iconPath}search.svg" alt="Search">
-  </a>
-
-  <a href="${base}pages/wishlist.html" class="icon-btn">
-    <img src="${iconPath}wishlist.svg" alt="Wishlist">
-  </a>
-
-  <a href="${base}pages/login.html" class="icon-btn">
-    <img src="${iconPath}user.svg" alt="User">
-  </a>
-
-  <a href="${base}pages/cart.html" class="icon-btn icon-bag">
-    <img src="${iconPath}cart.svg" alt="Cart">
-    <span class="icon-badge">1</span>
-  </a>
-  </div>
+  <div class="drawer-backdrop"></div>
 
 </header>
 
@@ -117,4 +129,53 @@ function loadHeader(){
 `;
 
 setActiveNav();
+
+  const body = document.body;
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const drawerClose = document.querySelector('.drawer-close');
+  const backdrop = document.querySelector('.drawer-backdrop');
+  let touchStartX = 0;
+
+  function openDrawer(){
+    body.classList.add('drawer-open');
+  }
+
+  function closeDrawer(){
+    body.classList.remove('drawer-open');
+  }
+
+  if(menuToggle){
+    menuToggle.addEventListener('click', openDrawer);
+  }
+
+  if(drawerClose){
+    drawerClose.addEventListener('click', closeDrawer);
+  }
+
+  if(backdrop){
+    backdrop.addEventListener('click', closeDrawer);
+  }
+
+  document.addEventListener('keydown', event => {
+    if(event.key === 'Escape'){
+      closeDrawer();
+    }
+  });
+
+  document.addEventListener('touchstart', event => {
+    touchStartX = event.touches[0].clientX;
+  });
+
+  document.addEventListener('touchend', event => {
+    const touchEndX = event.changedTouches[0].clientX;
+    const diff = touchEndX - touchStartX;
+
+    if(touchStartX < 40 && diff > 50){
+      openDrawer();
+    }
+
+    if(body.classList.contains('drawer-open') && diff < -50){
+      closeDrawer();
+    }
+  });
 }
