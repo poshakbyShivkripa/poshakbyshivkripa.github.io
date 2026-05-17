@@ -51,16 +51,14 @@ header{
   flex-direction:row;
   align-items:center;
   justify-content:space-between;
-  gap:.75rem;
+  gap:1rem;
   padding:8px 24px;
   overflow:visible;
 }
 
-.mobile-bar{
-  width:100%;
-  display:none;
+.header-left{
+  display:flex;
   align-items:center;
-  justify-content:space-between;
   gap:1rem;
 }
 
@@ -72,6 +70,7 @@ header{
   background:none;
   padding:0;
   margin:0;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
   cursor:pointer;
@@ -79,7 +78,7 @@ header{
 
 .mobile-menu-toggle span{
   display:block;
-  width:100%;
+  width:22px;
   height:3px;
   border-radius:999px;
   background:var(--dark);
@@ -100,9 +99,10 @@ header{
   display:block;
   letter-spacing:.25em;
   color:var(--primary);
-  font-size:.62rem;
+  font-size:.5rem;
   font-weight:500;
-  margin-bottom:0;
+  margin-bottom: 0px;
+  margin-left: 2px;
   text-transform:uppercase;
 }
 
@@ -122,12 +122,31 @@ nav{
   align-items:center;
   gap:1.5rem;
   flex-wrap:wrap;
+  flex:1;
+  justify-content:center;
+}
+
+.logo{
+  flex-shrink:0;
+  margin-right:1rem;
 }
 
 .header-icons{
   display:flex;
   align-items:center;
   gap:0.85rem;
+  flex-shrink:0;
+}
+
+header{
+  min-height:56px;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:8px 24px;
+  overflow:visible;
 }
 
 .drawer-backdrop{
@@ -290,58 +309,76 @@ nav a:hover{
 
 /* Animation */
 
-@media(max-width:860px){
+@media(max-width:700px){
   .top-strip{
     display:none;
   }
 
   header{
-    flex-direction:column;
     padding:10px 16px 16px;
   }
 
-  .mobile-bar{
+  .header-left{
     display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    width:100%;
+    gap:.75rem;
   }
 
   .mobile-menu-toggle{
     display:flex;
+    width:24px;
+    height:20px;
   }
 
-  .mobile-bar .logo{
-    flex-direction:row;
-    align-items:center;
-    gap:.4rem;
+  .mobile-menu-toggle span{
+    width:18px;
+    height:2px;
+    margin:2px 0;
   }
 
-  .mobile-bar .logo small{
-    display:inline-block;
+  .logo{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0;
   }
 
-  .mobile-bar .logo strong{
-    font-size:24px;
+  .header-left .logo small{
+    display:block;
+    font-size:.40rem;
+  }
+
+  .header-left .logo strong{
+    font-size:22px;
   }
 
   .header-icons{
     order:2;
     width:auto;
     justify-content:flex-end;
-    flex-wrap:wrap;
-    gap:.65rem;
+    flex-wrap:nowrap;
+    gap:.5rem;
   }
 
-  .logo{
-    order:1;
+  .icon-btn{
+    width:34px;
+    height:34px;
+  }
+
+  .icon-btn img{
+    width:16px;
+    height:16px;
   }
 
   .main-nav{
     position:fixed;
     top:0;
     left:-100%;
-    width:260px;
+    width:240px;
     height:100%;
     background:#fff;
-    padding:64px 16px 16px;
+    padding:56px 14px 14px;
     overflow-y:auto;
     box-shadow:8px 0 30px rgba(0,0,0,.12);
     transition:left .35s ease;
@@ -355,8 +392,8 @@ nav a:hover{
   .drawer-close{
     display:flex;
     position:absolute;
-    top:18px;
-    right:18px;
+    top:12px;
+    right:12px;
     width:34px;
     height:34px;
     border:none;
@@ -376,7 +413,7 @@ nav a:hover{
   .main-nav a{
     display:block;
     width:100%;
-    padding:.75rem 0;
+    padding:.65rem 0;
     border-bottom:1px solid #f4e3ef;
   }
 
@@ -392,7 +429,7 @@ nav a:hover{
   }
 
   .main-nav .dropdown-menu a{
-    padding-left:1rem;
+    padding-left:.85rem;
     border:none;
   }
 

@@ -60,7 +60,7 @@ function loadHeader(){
 
 <header>
 
-  <div class="mobile-bar">
+  <div class="header-left">
     <button class="mobile-menu-toggle" type="button" aria-label="Open menu">
       <span></span>
       <span></span>
@@ -70,25 +70,6 @@ function loadHeader(){
     <div class="logo">
       <small>POSHAK BY</small>
       <strong>Shivkripa</strong>
-    </div>
-
-    <div class="header-icons">
-      <a href="#" class="icon-btn">
-        <img src="${iconPath}search.svg" alt="Search">
-      </a>
-
-      <a href="${base}pages/wishlist.html" class="icon-btn">
-        <img src="${iconPath}wishlist.svg" alt="Wishlist">
-      </a>
-
-      <a href="${base}pages/login.html" class="icon-btn">
-        <img src="${iconPath}user.svg" alt="User">
-      </a>
-
-      <a href="${base}pages/cart.html" class="icon-btn icon-bag">
-        <img src="${iconPath}cart.svg" alt="Cart">
-        <span class="icon-badge">1</span>
-      </a>
     </div>
   </div>
 
@@ -120,6 +101,25 @@ function loadHeader(){
     <a href="${base}pages/about.html">About Us</a>
     <a href="${base}pages/contact.html">Contact Us</a>
   </nav>
+
+  <div class="header-icons">
+    <a href="#" class="icon-btn">
+      <img src="${iconPath}search.svg" alt="Search">
+    </a>
+
+    <a href="${base}pages/wishlist.html" class="icon-btn">
+      <img src="${iconPath}wishlist.svg" alt="Wishlist">
+    </a>
+
+    <a href="${base}pages/login.html" class="icon-btn">
+      <img src="${iconPath}user.svg" alt="User">
+    </a>
+
+    <a href="${base}pages/cart.html" class="icon-btn icon-bag">
+      <img src="${iconPath}cart.svg" alt="Cart">
+      <span class="icon-badge">1</span>
+    </a>
+  </div>
 
   <div class="drawer-backdrop"></div>
 
