@@ -1,0 +1,29 @@
+[
+  {
+    "title":"ELEGANCE",
+    "subtitle":"TRADITION WOVEN WITH",
+    "description":"Discover handcrafted Rajasthani heritage for every modern woman.",
+    "button":"Shop Now",
+    "image":"./assets/images/banner-1.png",
+    "link":"./pages/products.html"
+  },
+
+  {
+    "title":"ROYAL POSHAK",
+    "subtitle":"NEW ARRIVAL",
+    "description":"Luxury bridal and festive collections inspired by royal Rajasthan.",
+    "button":"Explore Collection",
+    "image":"./assets/images/banner-2.png",
+    "link":"./pages/products.html"
+  },
+
+  {
+    "title":"TIMELESS CRAFTSMANSHIP",
+    "subtitle":"EXQUISITE HANDLOOM WEAVES",
+    "description":"Experience the artistry of handwoven fabrics, where tradition meets elegance.",
+    "button":"Discover More",
+    "image":"./assets/images/banner-3.png",
+    "link":"./pages/products.html"
+  }
+
+]
