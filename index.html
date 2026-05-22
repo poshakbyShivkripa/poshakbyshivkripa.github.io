@@ -51,6 +51,11 @@
   class="hero-slider">
 </section>
 
+<section
+  id="category-slider"
+  class="category-section">
+</section>
+
 <section class="hero">
   <div class="hero-text">
     <h1>Elegance</h1>
@@ -70,11 +75,13 @@
 <script src="scripts/components/header.js"></script>
 <script src="scripts/components/footer.js"></script>
 <script src="scripts/components/hero-slider.js"></script>
+<script src="scripts/components/category-slider.js"></script>
 <script src="scripts/main.js"></script>
 <script>
 loadHeader();
 loadFooter();
 loadHeroSlider();
+loadCategorySlider();
 
 fetch('data/products.json')
 .then(res=>res.json())

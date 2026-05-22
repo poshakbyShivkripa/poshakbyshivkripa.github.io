@@ -1,0 +1,56 @@
+[
+  {
+    "title":"Poshak",
+    "subtitle":"Traditional",
+    "image":"./assets/images/category-1.png",
+    "link":"./pages/products.html"
+  },
+
+  {
+    "title":"Lehenga",
+    "subtitle":"Choli",
+    "image":"./assets/images/category-2.png",
+    "link":"./pages/products.html"
+  },
+
+  {
+    "title":"Dresses",
+    "subtitle":"& Kurta Sets",
+    "image":"./assets/images/category-1.png",
+    "link":"./pages/products.html"
+  },
+
+  {
+    "title":"Poshak",
+    "subtitle":"Traditional",
+    "image":"./assets/images/category-2.png",
+    "link":"./pages/products.html"
+  },
+
+  {
+    "title":"Lehenga",
+    "subtitle":"Choli",
+    "image":"./assets/images/category-1.png",
+    "link":"./pages/products.html"
+  },
+
+  {
+    "title":"Dresses",
+    "subtitle":"& Kurta Sets",
+    "image":"./assets/images/category-2.png",
+    "link":"./pages/products.html"
+  },
+  {
+    "title":"Poshak",
+    "subtitle":"Traditional",
+    "image":"./assets/images/category-1.png",
+    "link":"./pages/products.html"
+  },
+
+  {
+    "title":"Lehenga",
+    "subtitle":"Choli",
+    "image":"./assets/images/category-1.png",
+    "link":"./pages/products.html"
+  }
+]

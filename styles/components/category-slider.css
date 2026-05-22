@@ -1,0 +1,293 @@
+/* ===== Category Section ===== */
+
+.category-section{
+  padding:80px 40px;
+  background:#fff;
+}
+
+/* ===== Heading ===== */
+
+.section-heading{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.section-heading span{
+  display:block;
+
+  color:var(--primary);
+
+  font-size:.75rem;
+  letter-spacing:.28em;
+
+  margin-bottom:0;
+}
+
+.section-heading h2{
+  font-size:3rem;
+
+  font-family:'Times New Roman', serif;
+
+  font-weight:500;
+  margin-top: -10px;
+
+  background:
+  linear-gradient(
+    90deg,#7b5cc7,#d95ca7,#f0b5c2
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ===== Divider ===== */
+
+.section-divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:12px;
+
+  margin-bottom:0px;
+}
+
+.section-divider span{
+  width:50px;
+  height:5px;
+
+  background:
+  linear-gradient(
+    90deg,
+    transparent,
+    #f1c77a,
+    transparent
+  );
+}
+
+.section-divider img{
+  width:22px;
+  height:22px;
+
+  object-fit:contain;
+}
+
+/* ===== Scroll ===== */
+
+.category-scroll{
+  display:flex;
+  gap:28px;
+
+  overflow-x:auto;
+  scroll-behavior:smooth;
+
+  padding-bottom:5px;
+}
+
+.category-scroll::-webkit-scrollbar{
+  display:none;
+}
+
+/* ===== Card ===== */
+
+.category-card{
+  min-width:200px;
+
+  text-align:center;
+
+  text-decoration:none;
+
+  color:#333;
+
+  transition:.35s ease;
+}
+
+.category-card:hover{
+  transform:translateY(-4px);
+}
+
+/* ===== Image ===== */
+
+.category-image{
+  position:relative;
+
+  padding:10px;
+
+  border-radius:
+    150px 150px 22px 22px;
+
+  overflow:hidden;
+
+  background:
+  linear-gradient(
+    180deg,
+    #fdf1ec 0%,
+    #f4dad1 45%,
+    #e7b19f 100%
+  );
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.07);
+
+  margin-bottom:14px;
+  margin-top:5px;
+}
+
+/* ===== Inner Border ===== */
+
+.category-image::before{
+  content:'';
+
+  position:absolute;
+
+  inset:6px;
+
+  border-radius:
+    146px 146px 18px 18px;
+
+  border:5px solid
+    rgba(255,255,255,.95);
+
+  z-index:2;
+}
+
+/* ===== Top Diamond ===== */
+
+.category-image::after{
+  content:'';
+
+  position:absolute;
+
+  top:-8px;
+  left:50%;
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+
+  width:14px;
+  height:14px;
+
+  background:#d19381;
+
+  border-radius:3px;
+
+  z-index:4;
+}
+
+/* ===== Product Image ===== */
+
+.category-image img{
+  position:relative;
+
+  z-index:1;
+
+  width:100%;
+  height:250px;
+
+  object-fit:cover;
+
+  border-radius:
+    132px 132px 12px 12px;
+
+  display:block;
+}
+
+/* ===== Text ===== */
+
+.category-card h3{
+  font-size:1.05rem;
+  font-weight:600;
+  color:var(--primary);
+
+  margin-bottom:5px;
+}
+
+.category-card p{
+  color:#666;
+  font-size:.9rem;
+  line-height:1.4;
+}
+
+/* ===== Button ===== */
+
+.category-btn-wrap{
+  display:flex;
+  justify-content:center;
+
+  margin-top:44px;
+}
+
+.category-btn{
+  padding:1rem 2.2rem;
+
+  border-radius:999px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #9b63c7,
+    #d96ba7
+  );
+
+  color:#fff;
+
+  text-decoration:none;
+
+  font-size:.92rem;
+  font-weight:500;
+
+  transition:.3s ease;
+}
+
+.category-btn:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(155,99,199,.28);
+}
+
+/* ===== Mobile ===== */
+
+@media(max-width:768px){
+
+  .category-section{
+    padding:40px 16px;
+  }
+
+  .section-heading h2{
+    font-size:1.8rem;
+  }
+
+  .category-card{
+    min-width:110px;
+  }
+
+  .category-image{
+    padding:6px;
+    border-radius:
+      90px 90px 14px 14px;
+  }
+
+  .category-image::before{
+    inset:4px;
+    border-radius:
+      86px 86px 12px 12px;
+  }
+
+  .category-image img{
+    height:140px;
+
+    border-radius:
+      82px 82px 10px 10px;
+  }
+
+  .category-card h3{
+    font-size:0.95rem;
+  }
+
+  .category-card p{
+    font-size:0.8rem;
+  }
+
+}
