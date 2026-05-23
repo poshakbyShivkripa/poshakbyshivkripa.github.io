@@ -46,6 +46,7 @@
 </head>
 <body>
 <div id="header"></div>
+
 <section
   id="hero-slider"
   class="hero-slider">
@@ -56,18 +57,19 @@
   class="category-section">
 </section>
 
-<section class="hero">
-  <div class="hero-text">
-    <h1>Elegance</h1>
-    <p>Discover authentic Rajasthani poshak, rajputi dresses, lehenga choli and traditional women wear inspired by Rajasthan culture.</p>
-    <a class="btn" href="pages/products.html">Shop Now</a>
-  </div>
-  <img src="assets/images/web-design.png">
+<section
+  id="best-seller-products"
+  class="best-seller-section">
 </section>
 
-<section class="products">
-  <h2>Best Sellers</h2>
-  <div class="grid" id="homeProducts"></div>
+<section
+  id="trust-section"
+  class="trust-section">
+</section>
+
+<section
+  id="royal-collection"
+  class="royal-collection-section">
 </section>
 
 <div id="footer"></div>
@@ -76,28 +78,18 @@
 <script src="scripts/components/footer.js"></script>
 <script src="scripts/components/hero-slider.js"></script>
 <script src="scripts/components/category-slider.js"></script>
+<script src="scripts/components/best-seller.js"></script>
+<script src="scripts/components/trust-section.js"></script>
+<script src="scripts/components/royal-collection.js"></script>
 <script src="scripts/main.js"></script>
 <script>
 loadHeader();
 loadFooter();
 loadHeroSlider();
 loadCategorySlider();
-
-fetch('data/products.json')
-.then(res=>res.json())
-.then(data=>{
-  const container = document.getElementById('homeProducts');
-  data.products.forEach(product=>{
-    container.innerHTML += `
-    <div class="card">
-      <img src="${product.image.replace('../','')}">
-      <div class="card-body">
-        <h3>${product.name_en}</h3>
-        <p>₹${product.price}</p>
-      </div>
-    </div>`;
-  });
-});
+loadBestSellerProducts();
+loadTrustSection();
+loadRoyalCollection();
 </script>
 </body>
 </html>

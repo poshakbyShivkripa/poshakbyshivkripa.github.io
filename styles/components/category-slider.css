@@ -1,7 +1,9 @@
 /* ===== Category Section ===== */
 
 .category-section{
-  padding:80px 40px;
+  padding:20px 20px;
+  max-width:100%;
+  margin:0 auto;
   background:#fff;
 }
 
@@ -9,7 +11,7 @@
 
 .section-heading{
   text-align:center;
-  margin-bottom:20px;
+  margin-bottom:10px;
 }
 
 .section-heading span{
@@ -46,9 +48,7 @@
   display:flex;
   align-items:center;
   justify-content:center;
-
   gap:12px;
-
   margin-bottom:0px;
 }
 
@@ -76,22 +76,21 @@
 
 .category-scroll{
   display:flex;
-  gap:28px;
-
-  overflow-x:auto;
-  scroll-behavior:smooth;
-
-  padding-bottom:5px;
+  gap:40px;
+  justify-content:center;
+  align-content:center;
+  margin:0 auto;
+  
+  flex-wrap:wrap;
+  padding-bottom:10px;
 }
 
 .category-scroll::-webkit-scrollbar{
   display:none;
 }
 
-/* ===== Card ===== */
-
 .category-card{
-  min-width:200px;
+  flex:0 0 145px;
 
   text-align:center;
 
@@ -111,10 +110,10 @@
 .category-image{
   position:relative;
 
-  padding:10px;
+  padding:6px;
 
   border-radius:
-    150px 150px 22px 22px;
+    120px 120px 18px 18px;
 
   overflow:hidden;
 
@@ -129,8 +128,8 @@
   box-shadow:
     0 10px 30px rgba(0,0,0,.07);
 
-  margin-bottom:14px;
-  margin-top:5px;
+  margin-bottom:20px;
+  margin-top:6px;
 }
 
 /* ===== Inner Border ===== */
@@ -183,12 +182,12 @@
   z-index:1;
 
   width:100%;
-  height:250px;
+  height:190px;
 
   object-fit:cover;
 
   border-radius:
-    132px 132px 12px 12px;
+    112px 112px 10px 10px;
 
   display:block;
 }
@@ -252,42 +251,46 @@
 @media(max-width:768px){
 
   .category-section{
-    padding:40px 16px;
+    padding:30px 12px;
   }
 
   .section-heading h2{
-    font-size:1.8rem;
+    font-size:1.6rem;
+  }
+
+  .category-scroll{
+    gap:12px;
   }
 
   .category-card{
-    min-width:110px;
+    flex:0 0 80px;
   }
 
   .category-image{
-    padding:6px;
+    padding:4px;
     border-radius:
-      90px 90px 14px 14px;
+      70px 70px 14px 14px;
   }
 
   .category-image::before{
-    inset:4px;
+    inset:3px;
     border-radius:
-      86px 86px 12px 12px;
+      66px 66px 10px 10px;
   }
 
   .category-image img{
-    height:140px;
+    height:110px;
 
     border-radius:
-      82px 82px 10px 10px;
+      62px 62px 8px 8px;
   }
 
   .category-card h3{
-    font-size:0.95rem;
+    font-size:0.85rem;
   }
 
   .category-card p{
-    font-size:0.8rem;
+    font-size:0.75rem;
   }
 
 }

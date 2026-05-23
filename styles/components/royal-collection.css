@@ -1,0 +1,217 @@
+/* ===== Section ===== */
+
+.royal-collection-section{
+  padding:80px 40px;
+  margin-top: -100px;
+  background:#fff;
+}
+
+/* ===== Container ===== */
+
+.royal-collection-container{
+  display:grid;
+
+  grid-template-columns:
+    420px 1fr;
+
+  gap:42px;
+
+  align-items:center;
+}
+
+/* ===== Left Content ===== */
+
+.royal-content{
+  max-width:400px;
+}
+
+.royal-content h2{
+  font-size:3rem;
+
+  line-height:1.2;
+
+  margin-bottom:22px;
+
+  font-family:'Times New Roman', serif;
+
+  font-weight:500;
+
+  background:
+  linear-gradient(
+    90deg,
+    #7b5cc7,
+    #d95ca7
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.royal-content p{
+  color:#6d5a67;
+
+  line-height:1.9;
+
+  font-size:1rem;
+
+  margin-bottom:34px;
+}
+
+/* ===== Button ===== */
+
+.royal-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:1rem 2rem;
+
+  border-radius:14px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #9b63c7,
+    #d96ba7
+  );
+
+  color:#fff;
+
+  text-decoration:none;
+
+  font-size:.92rem;
+  font-weight:500;
+
+  transition:.3s ease;
+}
+
+.royal-btn:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(155,99,199,.28);
+}
+
+/* ===== Scroll ===== */
+
+.royal-scroll{
+  display:flex;
+
+  gap:18px;
+
+  overflow-x:auto;
+
+  scroll-behavior:smooth;
+
+  padding-bottom:10px;
+}
+
+.royal-scroll::-webkit-scrollbar{
+  display:none;
+}
+
+/* ===== Card ===== */
+
+.royal-card{
+  position:relative;
+
+  min-width:210px;
+
+  overflow:hidden;
+
+  border-radius:24px;
+
+  background:#faf6f8;
+
+  text-decoration:none;
+
+  transition:.35s ease;
+}
+
+.royal-card:hover{
+  transform:translateY(-5px);
+}
+
+/* ===== Image ===== */
+
+.royal-card img{
+  width:100%;
+  height:360px;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:.4s ease;
+}
+
+.royal-card:hover img{
+  transform:scale(1.04);
+}
+
+/* ===== Wishlist ===== */
+
+.royal-wishlist{
+  position:absolute;
+
+  top:12px;
+  right:12px;
+
+  width:38px;
+  height:38px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:rgba(255,255,255,.92);
+
+  backdrop-filter:blur(10px);
+
+  color:#666;
+
+  font-size:1rem;
+
+  cursor:pointer;
+
+  transition:.3s ease;
+}
+
+.royal-wishlist:hover{
+  color:#d96ba7;
+}
+
+/* ===== Mobile ===== */
+
+@media(max-width:992px){
+
+  .royal-collection-container{
+    grid-template-columns:1fr;
+  }
+
+  .royal-content{
+    max-width:100%;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .royal-collection-section{
+    padding:60px 20px;
+     margin-top: -50px;
+  }
+
+  .royal-content h2{
+    font-size:2.2rem;
+  }
+
+  .royal-card{
+    min-width:170px;
+  }
+
+  .royal-card img{
+    height:260px;
+  }
+
+}

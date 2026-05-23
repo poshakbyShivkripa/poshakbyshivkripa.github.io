@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 64 64"
+fill="none">
+
+  <circle
+    cx="32"
+    cy="32"
+    r="28"
+
+    stroke="url(#gradient)"
+    stroke-width="2.5"/>
+
+  <path
+    d="M24 38
+       L40 22"
+
+    stroke="url(#gradient)"
+    stroke-width="3"
+
+    stroke-linecap="round"/>
+
+  <circle
+    cx="24"
+    cy="38"
+    r="4"
+
+    stroke="url(#gradient)"
+    stroke-width="2.5"/>
+
+  <circle
+    cx="40"
+    cy="22"
+    r="4"
+
+    stroke="url(#gradient)"
+    stroke-width="2.5"/>
+
+  <defs>
+
+    <linearGradient
+      id="gradient"
+      x1="0"
+      y1="0"
+      x2="64"
+      y2="64">
+
+      <stop offset="0%" stop-color="#d96ba7"/>
+      <stop offset="100%" stop-color="#9b63c7"/>
+
+    </linearGradient>
+
+  </defs>
+
+</svg>

@@ -1,0 +1,84 @@
+[
+  {
+    "title":"Royal Bandhani Poshak",
+    "price":"2799",
+    "mrp":"3599",
+    "discount":"22% OFF",
+    "rating":"★★★★★",
+    "tag":"NEW",
+    "image":"./assets/images/category-1.png",
+    "link":"./pages/product-details.html"
+  },
+
+  {
+    "title":"Jaipuri Lehenga Choli",
+    "price":"3499",
+    "mrp":"4499",
+    "discount":"22% OFF",
+    "rating":"★★★★★",
+    "tag":"NEW",
+    "image":"./assets/images/category-1.png",
+    "link":"./pages/product-details.html"
+  },
+   {
+    "title":"Jaipuri Lehenga Choli",
+    "price":"3499",
+    "mrp":"4499",
+    "discount":"22% OFF",
+    "rating":"★★★★★",
+    "tag":"NEW",
+    "image":"./assets/images/category-1.png",
+    "link":"./pages/product-details.html"
+  },
+   {
+    "title":"Jaipuri Lehenga Choli",
+    "price":"3499",
+    "mrp":"4499",
+    "discount":"22% OFF",
+    "rating":"★★★★★",
+    "tag":"NEW",
+    "image":"./assets/images/category-1.png",
+    "link":"./pages/product-details.html"
+  },
+   {
+    "title":"Jaipuri Lehenga Choli",
+    "price":"3499",
+    "mrp":"4499",
+    "discount":"22% OFF",
+    "rating":"★★★★★",
+    "tag":"NEW",
+    "image":"./assets/images/category-1.png",
+    "link":"./pages/product-details.html"
+  },
+  {
+    "title":"Jaipuri Lehenga Choli",
+    "price":"3499",
+    "mrp":"4499",
+    "discount":"22% OFF",
+    "rating":"★★★★★",
+    "tag":"NEW",
+    "image":"./assets/images/category-1.png",
+    "link":"./pages/product-details.html"
+  },
+  {
+    "title":"Jaipuri Lehenga Choli",
+    "price":"3499",
+    "mrp":"4499",
+    "discount":"22% OFF",
+    "rating":"★★★★★",
+    "tag":"NEW",
+    "image":"./assets/images/category-1.png",
+    "link":"./pages/product-details.html"
+  },
+  {
+    "title":"Jaipuri Lehenga Choli",
+    "price":"3499",
+    "mrp":"4499",
+    "discount":"22% OFF",
+    "rating":"★★★★★",
+    "tag":"NEW",
+    "image":"./assets/images/category-1.png",
+    "link":"./pages/product-details.html"
+  }
+
+]

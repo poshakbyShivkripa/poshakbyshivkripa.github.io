@@ -1,0 +1,31 @@
+[
+  {
+    "title":"Premium Quality",
+    "subtitle":"Finest fabrics & materials",
+    "icon":"./assets/icons/premium.svg"
+  },
+
+  {
+    "title":"Handcrafted Designs",
+    "subtitle":"Made by skilled artisans",
+    "icon":"./assets/icons/handcrafted.svg"
+  },
+
+  {
+    "title":"Secure Shopping",
+    "subtitle":"100% safe & secure",
+    "icon":"./assets/icons/secure.svg"
+  },
+
+  {
+    "title":"Easy Returns",
+    "subtitle":"Hassle free returns",
+    "icon":"./assets/icons/return.svg"
+  },
+
+  {
+    "title":"Happy Customers",
+    "subtitle":"Loved by thousands",
+    "icon":"./assets/icons/happy.svg"
+  }
+]

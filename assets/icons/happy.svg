@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 64 64"
+fill="none">
+
+  <circle
+    cx="32"
+    cy="32"
+    r="28"
+
+    stroke="url(#gradient)"
+    stroke-width="2.5"/>
+
+  <path
+    d="M32 46
+       C20 38 16 30 16 24
+       C16 18 20 14 26 14
+       C30 14 32 17 32 17
+       C32 17 34 14 38 14
+       C44 14 48 18 48 24
+       C48 30 44 38 32 46
+       Z"
+
+    stroke="url(#gradient)"
+    stroke-width="2.5"
+
+    stroke-linejoin="round"/>
+
+  <defs>
+
+    <linearGradient
+      id="gradient"
+      x1="0"
+      y1="0"
+      x2="64"
+      y2="64">
+
+      <stop offset="0%" stop-color="#d96ba7"/>
+      <stop offset="100%" stop-color="#9b63c7"/>
+
+    </linearGradient>
+
+  </defs>
+
+</svg>
