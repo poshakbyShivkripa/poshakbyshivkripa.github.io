@@ -1,0 +1,49 @@
+[
+  {
+    "title":"Poshak Earrings",
+
+    "price":"1899",
+
+    "mrp":"2799",
+
+    "image":"../../assets/images/category-1.png",
+
+    "link":"../../pages/product-details.html"
+  },
+
+  {
+    "title":"Rajasthani Clutch",
+
+    "price":"1399",
+
+    "mrp":"4499",
+
+    "image":"../../assets/images/category-2.png",
+
+    "link":"../../pages/product-details.html"
+  },
+
+  {
+    "title":"Traditional Necklace",
+
+    "price":"2499",
+
+    "mrp":"3299",
+
+    "image":"../../assets/images/category-1.png",
+
+    "link":"../../pages/product-details.html"
+  },
+
+  {
+    "title":"Royal Bangles Set",
+
+    "price":"999",
+
+    "mrp":"1599",
+
+    "image":"../../assets/images/category-2.png",
+
+    "link":"../../pages/product-details.html"
+  }
+]

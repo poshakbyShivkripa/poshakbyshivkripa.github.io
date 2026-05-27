@@ -1,0 +1,56 @@
+{
+  "title":"Royal Bandhani Poshak Humrahi Pure",
+
+  "price":"1899",
+
+  "mrp":"2799",
+
+  "discount":"32% OFF",
+
+  "rating":"4.5",
+
+  "description":"A stunning hand-block printed cotton silk poshak with traditional Rajasthani Bandhani motifs and intricate gota patti work.",
+
+  "features":[
+    "Fabric: Cotton-Silk Mix",
+    "Craft: Hand-block Print & Gota Patti",
+    "Includes: Kurta, Lehanga, Dupatta"
+  ],
+
+  "sizes":[
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL"
+  ],
+
+  "colors":[
+
+    {
+      "code":"#5d1469",
+
+      "images":[
+        "../../assets/images/category-1.png",
+        "../../assets/images/category-2.png",
+        "../../assets/images/category-1.png",
+        "../../assets/images/category-1.png",
+        "../../assets/images/category-2.png",
+        "../../assets/images/category-1.png",
+        "../../assets/images/category-1.png",
+        "../../assets/images/category-2.png",
+        "../../assets/images/category-1.png"
+      ]
+    },
+
+    {
+      "code":"#d91d56",
+
+      "images":[
+        "../../assets/images/category-1.png",
+        "../../assets/images/category-2.png"
+      ]
+    }
+
+  ]
+}

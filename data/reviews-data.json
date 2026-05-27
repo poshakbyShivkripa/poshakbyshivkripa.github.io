@@ -1,0 +1,28 @@
+[
+  {
+    "name":"Neha R",
+
+    "rating":"5",
+
+    "review":"A stunning hand-block printed cotton silk poshak with traditional Rajasthani Bandhani motifs and intricate gota patti work.",
+
+    "images":[
+      "../../assets/images/category-1.png",
+      "../../assets/images/category-2.png",
+      "../../assets/images/category-1.png"
+    ]
+  },
+
+  {
+    "name":"Pooja S",
+
+    "rating":"4.5",
+
+    "review":"Beautiful quality fabric and elegant embroidery. The fitting was perfect and delivery was quick.",
+
+    "images":[
+      "../../assets/images/category-2.png",
+      "../../assets/images/category-2-2.png"
+    ]
+  }
+]

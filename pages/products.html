@@ -25,15 +25,40 @@
 <body>
 <div id="header"></div>
 <section class="products">
-<h1>Products</h1><div class='grid' id='productList'></div><script>loadProducts('productList')</script>
+<!-- PRODUCT DETAILS -->
+
+<section
+  id="product-details-section"
+  class="product-details-section">
 </section>
+
+<!-- REVIEWS -->
+
+<section
+  id="product-reviews-section"
+  class="product-reviews-section review-section">
+</section>
+
+<!-- COMPLETE LOOK -->
+
+<section
+  id="complete-look-section"
+  class="complete-look-section">
+</section>
+
+</section>
+
 <div id="footer"></div>
 <script src="../scripts/components/header.js"></script>
 <script src="../scripts/components/footer.js"></script>
-<script src="../scripts/main.js"></script>
+<script src="../scripts/components/product-details/product-details.js"></script>
+<script src="../scripts/components/product-details/product-reviews.js"></script>
+<script src="../scripts/components/product-details/review-model.js"></script>
+<script src="../scripts/components/product-details/complete-look.js"></script>
 <script>
 loadHeader();
 loadFooter();
+
 </script>
 </body>
 </html>
