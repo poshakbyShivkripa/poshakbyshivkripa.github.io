@@ -1,0 +1,198 @@
+.products-page{
+  display:grid;
+
+  grid-template-columns:
+    280px 1fr;
+
+  gap:30px;
+
+  padding:40px;
+}
+
+.product-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:24px;
+}
+
+.product-card{
+  display:block;
+  overflow:hidden;
+  border-radius:18px;
+  background:#fff;
+  color:inherit;
+  text-decoration:none;
+  box-shadow:0 16px 36px rgba(74,15,130,0.08);
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.product-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 20px 44px rgba(74,15,130,0.14);
+}
+
+.product-image{
+  position:relative;
+  aspect-ratio:3/4;
+  overflow:hidden;
+  background:#faf6f8;
+}
+
+.product-image img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+
+.product-tag{
+  position:absolute;
+  top:12px;
+  left:12px;
+  padding:5px 10px;
+  border-radius:999px;
+  background:#fff;
+  color:#9b63c7;
+  font-size:.72rem;
+  font-weight:700;
+}
+
+.product-details{
+  padding:14px;
+}
+
+.product-details h3{
+  margin:0 0 10px;
+  color:#3f3144;
+  font-size:1rem;
+  line-height:1.4;
+}
+
+.product-price{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:8px;
+}
+
+.product-price .current-price{
+  font-weight:700;
+  color:#3f3144;
+}
+
+.product-price .old-price{
+  color:#999;
+  text-decoration:line-through;
+  font-size:.9rem;
+}
+
+.rating{
+  color:#f5b301;
+  font-weight:600;
+  font-size:.9rem;
+}
+
+.filter-group{
+  margin-bottom:24px;
+}
+
+.filter-header{
+  width:100%;
+
+  padding:14px;
+
+  text-align:left;
+
+  border:none;
+
+  background:#faf6f8;
+
+  border-radius:14px;
+}
+
+@media(max-width:768px){
+
+  .products-page{
+    display:block;
+
+    padding:20px;
+  }
+
+  #filter-container{
+    display:none;
+  }
+
+  .product-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+
+    gap:16px;
+  }
+
+  .mobile-filter-btn{
+
+    position:fixed;
+
+    right:20px;
+    bottom:80px;
+
+    z-index:999;
+
+    width:60px;
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    color:#fff;
+
+    background:
+      linear-gradient(
+        90deg,
+        #9b63c7,
+        #d96ba7
+      );
+  }
+
+  .mobile-sort-bar{
+
+    position:fixed;
+
+    bottom:0;
+    left:0;
+
+    width:100%;
+
+    background:#fff;
+
+    border-top:
+      1px solid #eee;
+
+    z-index:998;
+  }
+
+  .mobile-sort-bar button{
+
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    color:#fff;
+
+    background:
+      linear-gradient(
+        90deg,
+        #9b63c7,
+        #d96ba7
+      );
+  }
+
+}

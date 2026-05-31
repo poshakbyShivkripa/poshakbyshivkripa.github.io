@@ -1,0 +1,82 @@
+[
+  {
+    "id":"P001",
+    "title":"Royal Bandhani Poshak",
+    "price":1899,
+    "mrp":2799,
+    "size":"M",
+    "color":"Purple",
+    "category":"Poshak",
+    "fabric":"Cotton",
+    "image":"../assets/images/category-1.png",
+    "rating":4.8,
+    "tag":"NEW"
+  },
+
+  {
+    "id":"P002",
+    "title":"Wedding Poshak",
+    "price":2499,
+    "mrp":3499,
+    "size":"L",
+    "color":"Pink",
+    "category":"Bridal",
+    "fabric":"Silk",
+    "image":"../assets/images/category-2.png",
+    "rating":4.9,
+    "tag":"BESTSELLER"
+  },
+  {
+    "id":"P002",
+    "title":"Wedding Poshak",
+    "price":2499,
+    "mrp":3499,
+    "size":"L",
+    "color":"Pink",
+    "category":"Bridal",
+    "fabric":"Silk",
+    "image":"../assets/images/category-2.png",
+    "rating":4.9,
+    "tag":"BESTSELLER"
+  },
+  {
+    "id":"P003",
+    "title":"Wedding Poshak",
+    "price":2499,
+    "mrp":3499,
+    "size":"L",
+    "color":"Pink",
+    "category":"Bridal",
+    "fabric":"Silk",
+    "image":"../assets/images/category-2.png",
+    "rating":4.9,
+    "tag":"BESTSELLER"
+  },
+  {
+    "id":"P004",
+    "title":"Wedding Poshak",
+    "price":2499,
+    "mrp":3499,
+    "size":"L",
+    "color":"Pink",
+    "category":"Bridal",
+    "fabric":"Silk",
+    "image":"../assets/images/category-2.png",
+    "rating":4.9,
+    "tag":"BESTSELLER"
+  },
+  {
+    "id":"P005",
+    "title":"Wedding Poshak",
+    "price":2499,
+    "mrp":3499,
+    "size":"L",
+    "color":"Pink",
+    "category":"Bridal",
+    "fabric":"Silk",
+    "image":"../assets/images/category-2.png",
+    "rating":4.9,
+    "tag":"BESTSELLER"
+  }
+
+]

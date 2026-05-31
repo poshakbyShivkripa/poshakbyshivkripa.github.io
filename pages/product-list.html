@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Shop authentic Rajasthani poshak, bridal wear, lehenga choli and traditional fashion from Poshak by Shivkripa.">
+<meta name="keywords" content="Rajasthani Poshak, Rajputi Dress, Bandhani Dress, Lehenga Choli, Traditional Rajasthani Dress, Poshak by Shivkripa">
+<meta name="author" content="Poshak by Shivkripa">
+
+<title>Products | Poshak by Shivkripa</title>
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<div id="header"></div>
+
+<main class="products-page">
+
+  <aside
+    id="filter-container"
+    class="filter-sidebar">
+  </aside>
+
+  <section class="product-list-section">
+
+    <div
+      id="productGrid"
+      class="product-grid">
+    </div>
+
+  </section>
+
+  <button
+    class="mobile-filter-btn"
+    type="button"
+    aria-label="Open filters">
+    Filter
+  </button>
+
+  <div class="mobile-sort-bar">
+    <button type="button">
+      Sort
+    </button>
+  </div>
+
+</main>
+
+<div id="footer"></div>
+
+<script src="../scripts/components/header.js"></script>
+<script src="../scripts/components/footer.js"></script>
+<script src="../scripts/components/product-list/product-list.js"></script>
+<script src="../scripts/components/product-list/product-filter.js"></script>
+<script>
+loadHeader();
+loadFooter();
+</script>
+</body>
+</html>

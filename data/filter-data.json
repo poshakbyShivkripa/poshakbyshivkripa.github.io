@@ -1,0 +1,48 @@
+[
+  {
+    "name":"Size",
+    "field":"size",
+
+    "options":[
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+
+  {
+    "name":"Color",
+    "field":"color",
+
+    "options":[
+      "Pink",
+      "Purple",
+      "Red",
+      "Yellow"
+    ]
+  },
+
+  {
+    "name":"Category",
+    "field":"category",
+
+    "options":[
+      "Poshak",
+      "Bridal",
+      "Lehenga"
+    ]
+  },
+
+  {
+    "name":"Fabric",
+    "field":"fabric",
+
+    "options":[
+      "Cotton",
+      "Silk",
+      "Georgette"
+    ]
+  }
+]
