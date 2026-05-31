@@ -163,7 +163,7 @@ async function loadProductDetails(){
 
         <!-- BUTTONS -->
 
-        <div class="product-actions">
+        <div class="product-actions mobile-sticky-actions">
 
           <button class="add-cart-btn">
             Add To Cart
