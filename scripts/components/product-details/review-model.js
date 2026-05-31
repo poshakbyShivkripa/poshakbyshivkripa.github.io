@@ -26,55 +26,81 @@ function ensureReviewModal(){
 
         <button
           class="review-modal-close"
+          type="button"
 
           onclick="
             closeReviewModal()
           ">
 
-          ×
+          &times;
 
         </button>
 
-        <!-- IMAGE -->
+        <div
+          class="review-modal-list-panel"
+          id="reviewModalListPanel">
 
-        <div class="review-modal-image-wrap">
+          <div class="review-modal-list-header">
 
-          <img
-            id="reviewModalImage"
+            <h3>
+              Customer Reviews
+            </h3>
 
-            class="review-modal-image"
+          </div>
 
-            src=""
-            alt="Review Image">
-
-          <button
-            class="review-modal-nav prev"
-            type="button"
-            onclick="prevReviewImage()">
-            ←
-          </button>
-
-          <button
-            class="review-modal-nav next"
-            type="button"
-            onclick="nextReviewImage()">
-            →
-          </button>
+          <div
+            class="review-modal-list"
+            id="reviewModalList">
+          </div>
 
         </div>
 
-        <!-- INFO -->
+        <div
+          class="review-modal-image-panel"
+          id="reviewModalImagePanel">
 
-        <div class="review-modal-info">
+          <!-- IMAGE -->
 
-          <h3 id="reviewModalName"></h3>
+          <div class="review-modal-image-wrap">
 
-          <div
-            class="stars"
-            id="reviewModalRating">
+            <img
+              id="reviewModalImage"
+
+              class="review-modal-image"
+
+              src=""
+              alt="Review Image">
+
+            <button
+              class="review-modal-nav prev"
+              type="button"
+              onclick="prevReviewImage()">
+              &#8592;
+            </button>
+
+            <button
+              class="review-modal-nav next"
+              type="button"
+              onclick="nextReviewImage()">
+              &#8594;
+            </button>
+
           </div>
 
-          <p id="reviewModalText"></p>
+          <!-- INFO -->
+
+          <div class="review-modal-info">
+
+            <h3 id="reviewModalName"></h3>
+
+            <div
+              class="stars"
+              id="reviewModalRating">
+            </div>
+
+            <p id="reviewModalText"></p>
+
+          </div>
 
         </div>
 
@@ -85,12 +111,65 @@ function ensureReviewModal(){
   );
 }
 
-/* ===== OPEN ===== */
+function setReviewModalMode(
+  mode
+){
+
+  const modal =
+    document.getElementById(
+      'reviewModal'
+    );
+
+  modal.classList.toggle(
+    'show-list',
+    mode === 'list'
+  );
+
+  modal.classList.toggle(
+    'show-image',
+    mode === 'image'
+  );
+}
+
+/* ===== OPEN ALL REVIEWS ===== */
+
+function openAllReviewsModal(){
+
+  ensureReviewModal();
+
+  const list =
+    document.getElementById(
+      'reviewModalList'
+    );
+
+  list.innerHTML =
+    window.reviewData
+      .map((item,reviewIndex)=>
+        createReviewCard(
+          item,
+          reviewIndex
+        )
+      ).join('');
+
+  setReviewModalMode(
+    'list'
+  );
+
+  document
+    .getElementById(
+      'reviewModal'
+    )
+    .classList.add('open');
+}
+
+/* ===== OPEN IMAGE ===== */
 
 function openReviewModal(
   reviewIndex,
   imageIndex
 ){
+
+  ensureReviewModal();
 
   window.currentReviewIndex =
     reviewIndex;
@@ -99,6 +178,10 @@ function openReviewModal(
     imageIndex;
 
   updateReviewModal();
+
+  setReviewModalMode(
+    'image'
+  );
 
   document
     .getElementById(
@@ -142,7 +225,7 @@ function updateReviewModal(){
 
   document.getElementById(
     'reviewModalRating'
-  ).textContent = '★★★★★';
+  ).innerHTML = '&#9733;&#9733;&#9733;&#9733;&#9733;';
 
   document.getElementById(
     'reviewModalText'

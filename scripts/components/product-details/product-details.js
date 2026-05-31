@@ -111,7 +111,14 @@ async function loadProductDetails(){
 
               <button
                 class="size-btn
-                ${index===0 ? 'active' : ''}">
+                ${index===0 ? 'active' : ''}"
+                type="button"
+                onclick="
+                  selectVariantOption(
+                    this,
+                    '.size-btn'
+                  )
+                ">
 
                 ${size}
 
@@ -142,12 +149,18 @@ async function loadProductDetails(){
               <button
                 class="color-btn
                 ${index===0 ? 'active' : ''}"
+                type="button"
+                aria-label="${color.name || `Color ${index + 1}`}"
 
                 style="
                   background:${color.code}
                 "
 
                 onclick="
+                  selectVariantOption(
+                    this,
+                    '.color-btn'
+                  );
                   changeGallery(
                     ${index},
                     productData
@@ -244,6 +257,22 @@ function changeMainImage(
 
   document
     .querySelectorAll('.thumbnail')
+    .forEach(item=>{
+      item.classList.remove('active');
+    });
+
+  element.classList.add('active');
+}
+
+/* ===== VARIANT SELECTION ===== */
+
+function selectVariantOption(
+  element,
+  selector
+){
+
+  document
+    .querySelectorAll(selector)
     .forEach(item=>{
       item.classList.remove('active');
     });

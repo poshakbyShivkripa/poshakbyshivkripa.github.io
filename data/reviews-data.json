@@ -24,5 +24,29 @@
       "../../assets/images/category-2.png",
       "../../assets/images/category-2-2.png"
     ]
+  },
+   {
+    "name":"Pooja S",
+
+    "rating":"4.5",
+
+    "review":"Beautiful quality fabric and elegant embroidery. The fitting was perfect and delivery was quick.",
+
+    "images":[
+      "../../assets/images/category-2.png",
+      "../../assets/images/category-2-2.png"
+    ]
+  },
+   {
+    "name":"Pooja S",
+
+    "rating":"4.5",
+
+    "review":"Beautiful quality fabric and elegant embroidery. The fitting was perfect and delivery was quick.",
+
+    "images":[
+      "../../assets/images/category-2.png",
+      "../../assets/images/category-2-2.png"
+    ]
   }
 ]
