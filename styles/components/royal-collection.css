@@ -157,8 +157,8 @@
   top:12px;
   right:12px;
 
-  width:38px;
-  height:38px;
+  width:28px;
+  height:28px;
 
   border:none;
 
@@ -170,7 +170,7 @@
 
   color:#666;
 
-  font-size:1rem;
+  font-size:.9rem;
 
   cursor:pointer;
 
@@ -179,6 +179,17 @@
 
 .royal-wishlist:hover{
   color:#d96ba7;
+}
+
+.royal-wishlist.is-active{
+  background:
+  linear-gradient(
+    90deg,
+    #9b63c7,
+    #d96ba7
+  );
+
+  color:#fff;
 }
 
 /* ===== Mobile ===== */

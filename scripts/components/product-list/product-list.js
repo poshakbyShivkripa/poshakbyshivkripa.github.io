@@ -1,6 +1,7 @@
 let allProducts = [];
 let visibleProducts = [];
 let currentSort = 'default';
+let wishlistProducts = new Set();
 
 async function loadProducts(){
 
@@ -42,6 +43,15 @@ function renderProducts(products){
             ${product.tag}
           </span>
 
+          <button
+            class="wishlist-btn ${wishlistProducts.has(product.id) ? 'is-active' : ''}"
+            type="button"
+            aria-label="Add to wishlist"
+            aria-pressed="${wishlistProducts.has(product.id)}"
+            onclick="toggleWishlist(event,'${product.id}')">
+            ${wishlistProducts.has(product.id) ? '&#9829;' : '&#9825;'}
+          </button>
+
         </div>
 
         <div class="product-details">
@@ -77,6 +87,20 @@ function renderProducts(products){
       </a>
 
     `).join('');
+}
+
+function toggleWishlist(event,id){
+
+  event.preventDefault();
+  event.stopPropagation();
+
+  if(wishlistProducts.has(id)){
+    wishlistProducts.delete(id);
+  } else {
+    wishlistProducts.add(id);
+  }
+
+  renderProducts(getSortedProducts(visibleProducts));
 }
 
 function getSortedProducts(products){

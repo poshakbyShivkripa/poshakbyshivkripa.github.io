@@ -1,3 +1,6 @@
+let bestSellerWishlist = new Set();
+let bestSellerProducts = [];
+
 async function loadBestSellerProducts(){
 
   const response =
@@ -5,8 +8,13 @@ async function loadBestSellerProducts(){
       './data/best-seller-data.json'
     );
 
-  const products =
+  bestSellerProducts =
     await response.json();
+
+  renderBestSellerProducts(bestSellerProducts);
+}
+
+function renderBestSellerProducts(products){
 
   const container =
     document.getElementById(
@@ -59,10 +67,13 @@ async function loadBestSellerProducts(){
               ${item.tag}
             </span>
 
-            <button class="wishlist-btn">
-
-              ♡
-
+            <button
+              class="wishlist-btn ${bestSellerWishlist.has(item.title) ? 'is-active' : ''}"
+              type="button"
+              aria-label="Add to wishlist"
+              aria-pressed="${bestSellerWishlist.has(item.title)}"
+              onclick="toggleBestSellerWishlist(event,'${item.title}')">
+              ${bestSellerWishlist.has(item.title) ? '&#9829;' : '&#9825;'}
             </button>
 
           </div>
@@ -76,11 +87,11 @@ async function loadBestSellerProducts(){
             <div class="product-price">
 
               <span class="current-price">
-                ₹${item.price}
+                &#8377;${item.price}
               </span>
 
               <span class="old-price">
-                ₹${item.mrp}
+                &#8377;${item.mrp}
               </span>
 
               <span class="discount">
@@ -102,4 +113,18 @@ async function loadBestSellerProducts(){
     </div>
 
   `;
+}
+
+function toggleBestSellerWishlist(event,id){
+
+  event.preventDefault();
+  event.stopPropagation();
+
+  if(bestSellerWishlist.has(id)){
+    bestSellerWishlist.delete(id);
+  } else {
+    bestSellerWishlist.add(id);
+  }
+
+  renderBestSellerProducts(bestSellerProducts);
 }

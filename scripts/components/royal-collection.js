@@ -1,3 +1,6 @@
+let royalWishlist = new Set();
+let royalCollectionItems = [];
+
 async function loadRoyalCollection(){
 
   const response =
@@ -5,8 +8,13 @@ async function loadRoyalCollection(){
       './data/royal-collection-data.json'
     );
 
-  const items =
+  royalCollectionItems =
     await response.json();
+
+  renderRoyalCollection(royalCollectionItems);
+}
+
+function renderRoyalCollection(items){
 
   const section =
     document.getElementById(
@@ -44,7 +52,7 @@ async function loadRoyalCollection(){
 
       <div class="royal-scroll">
 
-        ${items.map(item => `
+        ${items.map((item,index) => `
 
           <a href="${item.link}"
             class="royal-card">
@@ -53,10 +61,13 @@ async function loadRoyalCollection(){
               src="${item.image}"
               alt="Royal Collection">
 
-            <button class="royal-wishlist">
-
-              ♡
-
+            <button
+              class="royal-wishlist ${royalWishlist.has(index) ? 'is-active' : ''}"
+              type="button"
+              aria-label="Add to wishlist"
+              aria-pressed="${royalWishlist.has(index)}"
+              onclick="toggleRoyalWishlist(event,${index})">
+              ${royalWishlist.has(index) ? '&#9829;' : '&#9825;'}
             </button>
 
           </a>
@@ -68,4 +79,18 @@ async function loadRoyalCollection(){
     </div>
 
   `;
+}
+
+function toggleRoyalWishlist(event,id){
+
+  event.preventDefault();
+  event.stopPropagation();
+
+  if(royalWishlist.has(id)){
+    royalWishlist.delete(id);
+  } else {
+    royalWishlist.add(id);
+  }
+
+  renderRoyalCollection(royalCollectionItems);
 }

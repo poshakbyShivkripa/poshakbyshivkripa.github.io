@@ -195,11 +195,11 @@
 .wishlist-btn{
   position:absolute;
 
-  top:12px;
-  right:12px;
+  top:5%;
+  right:5px;
 
-  width:38px;
-  height:38px;
+  width:12px;
+  height:12px;
 
   border:none;
 
@@ -211,7 +211,7 @@
 
   cursor:pointer;
 
-  font-size:1rem;
+  font-size:.60rem;
 
   color:#666;
 
@@ -221,6 +221,17 @@
 .wishlist-btn:hover{
   color:#d96ba7;
   transform:scale(1.08);
+}
+
+.wishlist-btn.is-active{
+  background:
+  linear-gradient(
+    90deg,
+    #9b63c7,
+    #d96ba7
+  );
+
+  color:#fff;
 }
 
 /* ===== Details ===== */
