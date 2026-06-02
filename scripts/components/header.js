@@ -48,6 +48,8 @@ function loadHeader(){
 
   const base = getBasePath();
   const iconPath = `${base}assets/icons/`;
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const isHomePage = currentPage === 'index.html' || currentPage === '';
 
   document.getElementById("header").innerHTML = `
 <div class="header-wrapper">
@@ -61,11 +63,21 @@ function loadHeader(){
 <header>
 
   <div class="header-left">
-    <button class="mobile-menu-toggle" type="button" aria-label="Open menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    ${
+      isHomePage
+        ? `
+          <button class="mobile-menu-toggle" type="button" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        `
+        : `
+          <button class="mobile-back-btn" type="button" aria-label="Go back">
+            &lt;
+          </button>
+        `
+    }
 
     <div class="logo">
       <small>POSHAK BY</small>
@@ -132,6 +144,7 @@ setActiveNav();
 
   const body = document.body;
   const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const backButton = document.querySelector('.mobile-back-btn');
   const drawerClose = document.querySelector('.drawer-close');
   const backdrop = document.querySelector('.drawer-backdrop');
   let touchStartX = 0;
@@ -146,6 +159,17 @@ setActiveNav();
 
   if(menuToggle){
     menuToggle.addEventListener('click', openDrawer);
+  }
+
+  if(backButton){
+    backButton.addEventListener('click', () => {
+      if(window.history.length > 1){
+        window.history.back();
+        return;
+      }
+
+      window.location.href = `${base}index.html`;
+    });
   }
 
   if(drawerClose){
@@ -170,7 +194,7 @@ setActiveNav();
     const touchEndX = event.changedTouches[0].clientX;
     const diff = touchEndX - touchStartX;
 
-    if(touchStartX < 40 && diff > 50){
+    if(isHomePage && touchStartX < 40 && diff > 50){
       openDrawer();
     }
 

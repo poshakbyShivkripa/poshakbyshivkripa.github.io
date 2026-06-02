@@ -27,6 +27,26 @@
 
   <section class="product-list-section">
 
+    <div class="product-list-header">
+      <div>
+        <h1>Products</h1>
+        <p>All Items</p>
+      </div>
+
+      <label class="sort-control">
+        <span>Sort By</span>
+        <select
+          data-sort-select
+          aria-label="Sort products">
+          <option value="default">Featured</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="rating-high">Rating</option>
+          <option value="name-az">Name: A to Z</option>
+        </select>
+      </label>
+    </div>
+
     <div
       id="productGrid"
       class="product-grid">
@@ -34,17 +54,75 @@
 
   </section>
 
-  <button
-    class="mobile-filter-btn"
-    type="button"
-    aria-label="Open filters">
-    Filter
-  </button>
-
-  <div class="mobile-sort-bar">
-    <button type="button">
-      Sort
+  <div class="mobile-list-actions">
+    <button
+      class="mobile-filter-btn"
+      type="button"
+      aria-label="Open filters"
+      onclick="toggleMobileFilters()">
+      Filter
     </button>
+
+    <button
+      class="mobile-sort-btn"
+      type="button"
+      aria-label="Open sorting"
+      onclick="toggleMobileSort()">
+      Sort By
+    </button>
+  </div>
+
+  <div
+    id="mobile-sort-panel"
+    class="mobile-sort-panel">
+
+    <div class="sort-panel-header">
+      <h2>Sort By</h2>
+      <button
+        class="sort-close-btn"
+        type="button"
+        aria-label="Close sorting"
+        onclick="toggleMobileSort()">
+        &times;
+      </button>
+    </div>
+
+    <div class="sort-options">
+      <button
+        type="button"
+        data-sort-option="default"
+        onclick="selectMobileSort('default')">
+        Featured
+      </button>
+
+      <button
+        type="button"
+        data-sort-option="price-low"
+        onclick="selectMobileSort('price-low')">
+        Price: Low to High
+      </button>
+
+      <button
+        type="button"
+        data-sort-option="price-high"
+        onclick="selectMobileSort('price-high')">
+        Price: High to Low
+      </button>
+
+      <button
+        type="button"
+        data-sort-option="rating-high"
+        onclick="selectMobileSort('rating-high')">
+        Rating
+      </button>
+
+      <button
+        type="button"
+        data-sort-option="name-az"
+        onclick="selectMobileSort('name-az')">
+        Name: A to Z
+      </button>
+    </div>
   </div>
 
 </main>

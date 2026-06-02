@@ -16,12 +16,29 @@ async function loadFilters(){
     );
 
   container.innerHTML =
+    `
+      <h2 class="filter-sidebar-title">Filters</h2>
+
+      <div class="filter-panel-header">
+        <h2>Filters</h2>
+        <button
+          class="filter-close-btn"
+          type="button"
+          aria-label="Close filters"
+          onclick="toggleMobileFilters()">
+          &times;
+        </button>
+      </div>
+    ` +
     filterData.map(filter => `
 
       <div class="filter-group">
 
         <button
-          class="filter-header">
+          class="filter-header"
+          type="button"
+          aria-expanded="false"
+          onclick="toggleFilterGroup(this)">
 
           ${filter.name}
 
@@ -81,7 +98,44 @@ function applyFilters(){
 
   });
 
-  renderProducts(filtered);
+  visibleProducts = filtered;
+
+  renderProducts(getSortedProducts(visibleProducts));
+}
+
+function toggleMobileFilters(){
+
+  const container =
+    document.getElementById(
+      'filter-container'
+    );
+
+  const sortPanel =
+    document.getElementById(
+      'mobile-sort-panel'
+    );
+
+  sortPanel.classList.remove('is-open');
+
+  container.classList.toggle('is-open');
+}
+
+function toggleFilterGroup(button){
+
+  const group =
+    button.closest(
+      '.filter-group'
+    );
+
+  const isOpen =
+    group.classList.toggle(
+      'is-open'
+    );
+
+  button.setAttribute(
+    'aria-expanded',
+    isOpen
+  );
 }
 
 loadFilters();

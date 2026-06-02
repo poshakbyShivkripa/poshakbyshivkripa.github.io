@@ -1,4 +1,6 @@
 let allProducts = [];
+let visibleProducts = [];
+let currentSort = 'default';
 
 async function loadProducts(){
 
@@ -10,7 +12,9 @@ async function loadProducts(){
   allProducts =
     await response.json();
 
-  renderProducts(allProducts);
+  visibleProducts = [...allProducts];
+
+  renderProducts(getSortedProducts(visibleProducts));
 }
 
 function renderProducts(products){
@@ -75,4 +79,97 @@ function renderProducts(products){
     `).join('');
 }
 
+function getSortedProducts(products){
+
+  const sorted =
+    [...products];
+
+  if(currentSort === 'price-low'){
+    sorted.sort((a,b) => a.price - b.price);
+  }
+
+  if(currentSort === 'price-high'){
+    sorted.sort((a,b) => b.price - a.price);
+  }
+
+  if(currentSort === 'rating-high'){
+    sorted.sort((a,b) => b.rating - a.rating);
+  }
+
+  if(currentSort === 'name-az'){
+    sorted.sort((a,b) => a.title.localeCompare(b.title));
+  }
+
+  return sorted;
+}
+
+function applySort(value){
+
+  currentSort = value;
+
+  document
+    .querySelectorAll('[data-sort-select]')
+    .forEach(select => {
+      select.value = value;
+    });
+
+  updateSortOptions();
+
+  renderProducts(getSortedProducts(visibleProducts));
+}
+
+function setupSortControls(){
+
+  document
+    .querySelectorAll('[data-sort-select]')
+    .forEach(select => {
+      select.addEventListener('change', event => {
+        applySort(event.target.value);
+      });
+    });
+}
+
+function updateSortOptions(){
+
+  document
+    .querySelectorAll('[data-sort-option]')
+    .forEach(button => {
+      button.classList.toggle(
+        'is-active',
+        button.dataset.sortOption === currentSort
+      );
+    });
+}
+
+function toggleMobileSort(){
+
+  const panel =
+    document.getElementById(
+      'mobile-sort-panel'
+    );
+
+  const filterPanel =
+    document.getElementById(
+      'filter-container'
+    );
+
+  filterPanel.classList.remove('is-open');
+
+  panel.classList.toggle('is-open');
+}
+
+function selectMobileSort(value){
+
+  applySort(value);
+
+  const panel =
+    document.getElementById(
+      'mobile-sort-panel'
+    );
+
+  panel.classList.remove('is-open');
+}
+
+setupSortControls();
+updateSortOptions();
 loadProducts();
